@@ -5,21 +5,21 @@ import  datetime  as  dt
 # Create your tests here.
 class neighbourhoodTestClass(TestCase):
     def setUp(self):
-        self . Chocolates  =  neighborhood ( neighborhood = 'Chocolates' )
+        self . Byimana  =  neighbourhood ( neighbourhood = 'Byimana' )
 
     def test_instance(self):
-        self.assertTrue(isinstance(self.St. Joseph,neighbourhood))
+        self.assertTrue(isinstance(self.Byimana,neighbourhood))
 
     def tearDown(self):
         neighbourhood.objects.all().delete()
 
     def test_save_method(self):
-        self.St. Joseph.save_neighbourhood()
+        self.Byimana.save_neighbourhood()
         hood = neighbourhood.objects.all()
         self.assertTrue(len(hood)>0)
 
     def test_delete_method(self):
-        self . Chocolates . delete_neighborhood ( 'Chocolates' )
+        self . Byimana . delete_neighbourhood ( 'Byimana' )
         hood = neighbourhood.objects.all()
         self.assertTrue(len(hood)==0)
 

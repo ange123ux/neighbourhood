@@ -20,6 +20,6 @@ urlpatterns  = [
     url(r'^admin/', admin.site.urls),
     url(r'',include('hood.urls')),
     url(r'^accounts/',include('registration.backends.simple.urls')),
-    url(r'^logout/$',views.logout, {"next_page":'/'},name="logout"),
+    url(r'^logout/$', views.LogoutView.as_view(template_name='registration/login.html'), {"next_page": '/'}),
     url(r'^tinymce',include('tinymce.urls')),
 ]

@@ -8,7 +8,7 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
 import os
-import django_heroku
+# import django_heroku
 import dj_database_url
 from decouple import config,Csv
 from django.conf import settings
@@ -76,6 +76,7 @@ INSTALLED_APPS = [
     'bootstrap4',
     'tinymce',
     'rest_framework',
+    'registration',
 ]
 
 MIDDLEWARE = [
@@ -135,7 +136,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'Afrika/Kigali'
+TIME_ZONE = 'Africa/Kigali'
 
 USE_I18N = True
 
@@ -159,4 +160,4 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 #Configure Django App for Heroku
-django_heroku.settings(locals())
+# django_heroku.settings(locals())
